@@ -8,9 +8,5 @@ metadata:
     io.kompose.service: mysql-server
   name: mysql-server
 spec:
-  ports:
-    - name: "3306"
-      port: 3306
-      targetPort: 3306
-  selector:
-    io.kompose.service: mysql-server
+  type: ExternalName
+  externalName: petclinic.c5ltdgwi4ukn.us-east-1.rds.amazonaws.com # Change this line with the endpoint of your RDS.
